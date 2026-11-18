@@ -1,0 +1,84 @@
+{
+  "you": {
+    "name": "Your Name",
+    "business": "Your Business LLC",
+    "email": "you@example.com",
+    "address": "123 Example St, Anytown",
+    "logo": ""
+  },
+  "timezone": "America/Los_Angeles",
+  "defaults": {
+    "hourly_rate": 150,
+    "currency": "USD",
+    "agent_billable_fraction": 1.0,
+    "engaged_gap_minutes": 15,
+    "break_gap_minutes": 45,
+    "session_break_minutes": 45,
+    "read_allowance_minutes": 5,
+    "rampup_allowance_minutes": 5,
+    "unclosed_cap_minutes": 10,
+    "rounding": {"increment_hours": 0.01, "mode": "nearest"},
+    "billing_period": {"type": "weekly", "week_starts": "monday"},
+    "line_items": "session",
+    "show_session_detail": false,
+    "show_project_subtotals": false,
+    "show_agent_time": false,
+    "project_labels": {"(root)": "General / cross-project"},
+    "non_billable_sessions": []
+  },
+  "clients": {
+    "acme": {
+      "name": "Acme Co",
+      "contact": "billing@example.com",
+      "address": "1 Acme Way, Anytown",
+      "scope": {
+        "accounts": ["~/.claude-clientx"],
+        "directories": ["~/Code/ClientX"],
+        "repos": []
+      },
+      "overrides": {},
+      "non_billable_sessions": [],
+      "projects": {"project-a": {"hourly_rate": 150}},
+      "mercury": {
+        "enabled": false,
+        "customer_id": "",
+        "destination_account_id": "",
+        "due_in_days": 15,
+        "cc_emails": [],
+        "ach_debit_enabled": false,
+        "credit_card_enabled": false,
+        "use_real_account_number": false
+      }
+    },
+    "beta": {
+      "name": "Beta Inc",
+      "contact": "ap@example.com",
+      "address": "2 Beta Blvd, Anytown",
+      "scope": {
+        "accounts": [],
+        "directories": ["~/Code/ClientY"],
+        "repos": []
+      },
+      "overrides": {
+        "hourly_rate": 200,
+        "billing_period": {"type": "monthly"},
+        "rounding": {"increment_hours": 0.25, "mode": "up"}
+      },
+      "non_billable_sessions": [],
+      "projects": {},
+      "mercury": {
+        "enabled": false,
+        "customer_id": "",
+        "destination_account_id": "",
+        "due_in_days": 30,
+        "cc_emails": [],
+        "ach_debit_enabled": false,
+        "credit_card_enabled": false,
+        "use_real_account_number": false
+      }
+    }
+  },
+  "pdf": {"browser_path": "", "output_dir": "~/.timesheet/invoices"},
+  "mercury": {"api_key_env": "MERCURY_API_KEY", "base_url": "", "allow_custom_host": false},
+  "status": {"components": ["invoice_due", "current_hours"], "show_amounts": false, "reminders": "off"}
+}

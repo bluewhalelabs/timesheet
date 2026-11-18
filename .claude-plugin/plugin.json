@@ -1,0 +1,6 @@
+{
+  "name": "timesheet",
+  "version": "0.1.0",
+  "description": "Track agent time and your engaged time per client, and produce a timesheet PDF per billing period.",
+  "license": "MIT"
+}

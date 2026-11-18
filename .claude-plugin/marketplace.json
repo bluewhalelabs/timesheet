@@ -1,0 +1,12 @@
+{
+  "name": "timesheet",
+  "owner": {"name": "timesheet contributors"},
+  "plugins": [
+    {
+      "name": "timesheet",
+      "source": "./",
+      "description": "Track agent time and your engaged time per client, and produce a timesheet PDF (and an optional unsent Mercury invoice) per billing period.",
+      "version": "0.1.0"
+    }
+  ]
+}

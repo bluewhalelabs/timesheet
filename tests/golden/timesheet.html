@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Timesheet acme-2026-11-02_2026-11-08</title>
+<style>
+@page { size: Letter; margin: 0.75in; }
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body {
+  margin: 0;
+  color: #1a1a1a;
+  background: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.45;
+}
+.page { max-width: 7in; margin: 0 auto; }
+h1, h2, h3, p { margin: 0; }
+.top { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5in;
+  padding-bottom: 14pt; border-bottom: 1.5pt solid #4a5560; }
+.from img.logo { display: block; max-height: 0.7in; max-width: 2.4in; margin-bottom: 8pt; }
+.from .biz { font-size: 15pt; font-weight: 600; letter-spacing: 0.01em; }
+.from .biz:empty { display: none; }
+.from .meta { color: #55606b; font-size: 9.5pt; }
+.doc { text-align: right; }
+.doc .title { font-size: 20pt; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase;
+  color: #4a5560; }
+.doc .ref, .doc .period { color: #55606b; font-size: 9.5pt; }
+.to { margin: 18pt 0 20pt; }
+.to h3 { font-size: 8.5pt; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #4a5560; margin-bottom: 3pt; }
+.to .name { font-weight: 600; }
+.to .meta { color: #55606b; font-size: 9.5pt; }
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+th { text-align: left; font-size: 8.5pt; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: #4a5560; padding: 5pt 8pt; border-bottom: 1pt solid #4a5560; }
+td { padding: 6pt 8pt; vertical-align: top; border-bottom: 0.5pt solid #d5d9dd; }
+thead { display: table-header-group; }
+tr { break-inside: avoid; page-break-inside: avoid; }
+th.num, td.num { text-align: right; white-space: nowrap; }
+td.date { white-space: nowrap; width: 1.45in; }
+td.desc { white-space: pre-line; overflow-wrap: anywhere; }
+tr.total { break-inside: avoid; page-break-inside: avoid; break-before: avoid;
+  page-break-before: avoid; }
+tr.total td { border-top: 1.5pt solid #4a5560; border-bottom: none; font-weight: 600;
+  padding-top: 8pt; }
+tr.total td.label { text-align: right; letter-spacing: 0.08em; text-transform: uppercase;
+  font-size: 9pt; color: #4a5560; }
+.subtotals { margin-top: 22pt; width: 55%; break-inside: avoid; }
+.subtotals h3, .detail h2 { font-size: 8.5pt; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: #4a5560; margin-bottom: 4pt; }
+.subtotals table { font-size: 9.5pt; }
+.subtotals .subnote { color: #55606b; font-size: 9pt; margin-bottom: 4pt; }
+.foot { margin-top: 24pt; color: #55606b; font-size: 9.5pt; white-space: pre-line; }
+.foot:empty { display: none; }
+.detail { break-before: page; page-break-before: always; }
+.detail table { font-size: 9.5pt; }
+.detail td.when { white-space: nowrap; }
+.detail .note { margin-top: 16pt; color: #55606b; font-size: 9.5pt; }
+</style>
+</head>
+<body>
+<div class="page">
+<header class="top">
+  <div class="from"><h1 class="biz">Example Studio</h1><p class="meta">Pat Example</p><p class="meta">pat@example.com</p><p class="meta">1 Main Street<br>Suite 2<br>Springfield</p></div>
+  <div class="doc">
+    <h2 class="title">Timesheet</h2>
+    <p class="ref">Reference acme-2026-11-02_2026-11-08</p>
+    <p class="period">Nov 2 – Nov 8, 2026</p>
+  </div>
+</header>
+<section class="to">
+  <h3>Prepared for</h3>
+  <p class="name">Acme Co</p><p class="meta">Ann Acme</p><p class="meta">9 Side Road<br>Townsville</p>
+</section>
+<table class="items">
+  <thead>
+    <tr><th>Date</th><th>Description</th><th class="num">Hours</th><th class="num">Rate</th><th class="num">Amount</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="date">Tue, Nov 3, 2026</td><td class="desc">Built the export &amp; reports page</td><td class="num hours">1.25</td><td class="num rate">$150.00</td><td class="num amt">$187.50</td></tr>
+    <tr><td class="date">Wed, Nov 4, 2026</td><td class="desc">API review
+and fixes</td><td class="num hours">1.50</td><td class="num rate">$150.00</td><td class="num amt">$225.00</td></tr>
+    <tr class="total"><td class="label" colspan="2">Total</td><td class="num">2.75</td><td></td><td class="num">$412.50</td></tr>
+  </tbody>
+</table>
+<section class="subtotals"><h3>By project (before per-line rounding)</h3><p class="subnote">Project figures are rounded once per project and may differ slightly from the line total above.</p><table><thead><tr><th>Project</th><th class="num">Hours</th><th class="num">Amount</th></tr></thead><tbody><tr><td>project-a</td><td class="num">1.75</td><td class="num">$262.50</td></tr><tr><td>project-b</td><td class="num">1.00</td><td class="num">$150.00</td></tr></tbody></table></section>
+<p class="foot">Thank you for your business.</p>
+
+</div>
+</body>
+</html>
